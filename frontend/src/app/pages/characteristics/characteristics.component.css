@@ -107,9 +107,9 @@ h3 {
     }
 
     .physiques-image {
-        width: 50%;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
     }
 
     .physiques-text {
@@ -139,14 +139,14 @@ h3 {
     }
 
     .physiques-image {
-        width: 25%;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        width: 50%;
+        margin: 0 auto;
+        padding: 0;
     }
 
     .physiques-text {
         margin-bottom: 20px;
         margin-top: 20px;
-        width: 75%;
+        width: 50%;
     }
 }
