@@ -1,4 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+/* Couleurs principales */
+:root {
+    --flamingo-primary: #FF3366;
+    --flamingo-accent: #FFD700;
+    --flamingo-warn: #FF5722;
+    --flamingo-background: #f7f7f7;
+    --flamingo-text: #333333;
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Thèmes de base */
+body {
+    background-color: var(--flamingo-background);
+    color: var(--flamingo-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Couleurs appliquées aux composants Angular Material */
+.mat-toolbar {
+    background-color: var(--flamingo-primary);
+    color: white;
+}
+
+.mat-button {
+    color: var(--flamingo-primary);
+}
+
+.mat-button:hover {
+    background-color: var(--flamingo-accent);
+}
+
+.mat-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mat-menu {
+    background-color: var(--flamingo-primary);
+}
+
+.mat-icon {
+    color: white;
+}
+
+button {
+    background-color: var(--flamingo-primary);
+    border-radius: 4px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: var(--flamingo-accent);
+}
+
+.mat-raised-button {
+    background-color: var(--flamingo-primary);
+    color: white;
+    border-radius: 4px;
+}
+
+.mat-raise-button:hover {
+    background-color: var(--flamingo-accent);
+}
+
+.mat-menu-item {
+    color: white;
+}
+
+.mat-menu-item:hover {
+    background-color: var(--flamingo-accent);
+}

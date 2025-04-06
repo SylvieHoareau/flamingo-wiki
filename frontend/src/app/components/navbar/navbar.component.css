@@ -2,7 +2,7 @@
 
 .navbar {
     background: linear-gradient(90deg, #fcf5c0, #fcd1d9);
-    color: #6a1b9a;
+    color: var(--flamingo-primary);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -10,7 +10,7 @@
 }
 
 a, button { 
-    color: #6a1b9a;
+    color: var(--flamingo-warn);
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -19,7 +19,7 @@ a, button {
 }
 
 a:hover, button:hover {
-    color: #3700b3;
+    color: var(--flamingo-text);
     border-radius: 4px;
 }
 

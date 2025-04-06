@@ -1,0 +1,15 @@
+/* Couleurs principales */
+:root {
+    --flamingo-primary: #FF3366;
+    --flamingo-accent: #FFD700;
+    --flamingo-warn: #FF5722;
+    --flamingo-background: #f7f7f7;
+    --flamingo-text: #333333;
+}
+
+/* Thèmes de base */
+body {
+    background-color: var(--flamingo-background);
+    color: var(--flamingo-text);
+    
+}

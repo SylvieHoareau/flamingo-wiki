@@ -1,9 +1,31 @@
 .hero {
-    background: linear-gradient(to right, #fcd1d9, #fcf5c0);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     padding: 2rem;
     text-align: center;
-    border-radius: 12px;
     margin-bottom: 2rem;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 2rem;
 }
 
 .section {
@@ -12,4 +34,43 @@
     background-color: #fff5f8;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(255, 192, 203, 0.2);
+}
+
+ul {
+    list-style-type: '🦩';
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: #c74b7a;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding-left: 0.5rem;
+}
+
+.cta {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #e91e63;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.cta a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cta a:hover {
+    color: #c61850;
+    background-color: var(--flamingo-accent);
 }
