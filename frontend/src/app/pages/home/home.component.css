@@ -1,0 +1,15 @@
+.hero {
+    background: linear-gradient(to right, #fcd1d9, #fcf5c0);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.section {
+    margin: 2re 0;
+    padding: 1rem;
+    background-color: #fff5f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 192, 203, 0.2);
+}

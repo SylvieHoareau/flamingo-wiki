@@ -1,3 +1,10 @@
 <div>
-    <img *ngFor="let photo of photos" [src]="photo" alt="Flamant rose">
+    @for (photo of photos; track photo) {
+        <img 
+            [src]="photo" 
+            alt="Flamant rose"
+            loading="lazy"
+            width="300"
+        >
+    }
 </div>

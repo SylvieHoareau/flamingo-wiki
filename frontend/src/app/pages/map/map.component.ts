@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
-import * as L from 'leaflet';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-map',
+  standalone: true,
   imports: [],
   templateUrl: './map.component.html',
   styleUrl: './map.component.css'
 })
 
-ngOnInit(){
-  const map = L.map('map').setView([43.6, 3.9], 8); // Autour de la Camargue
+export class MapComponent implements AfterViewInit {
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  private map: any;
 
-  L.marker([43.6, 3.9]).addTo(map).bindPopup('Flamants roses ici !');
-}
+  async ngAfterViewInit(): Promise<void> {
+    if (typeof window !== 'undefined') {
+      const L = await import('leaflet');
 
-export class MapComponent {
-
+      this.map = L.map('map').setView([43.5, 4.4], 8);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(this.map);
+    }  
+  }
 }
