@@ -28,6 +28,26 @@ h3 {
     color: #920468;
 }
 
+article {
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+article h2 {
+    color: white;
+    background: var(--flamingo-warn);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-left: 0;
+    border-radius: 6px 6px 0 0;
+}
 
 .section-image {
     max-width: 100%;
