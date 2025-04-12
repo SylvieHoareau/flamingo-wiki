@@ -1,21 +1,50 @@
+/* Mobile First*/
+
+/* Pour les écrans de smartphone */
+.map-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.map-title {
+    text-align: center;
+}
+
 #map {
-    width: 100%;
-    height: 100%;
+    width: 320px;
+    height: 320px;
 }
 /* Cartes */
 .cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .card {
+    flex: 1 1 25px;
+    border: 1px solid #ddd;
     background: #fff;
     padding: 20px;
     margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(255, 192, 203, 0.2);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(255, 192, 203, 0.2);
     width: 45%;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .card h3 {
@@ -27,4 +56,20 @@
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
+}
+
+/* Pour les écrans de tablettes */
+@media screen and (min-width: 768px) {
+    #map {
+        width: 600px;
+        height: 600px;
+    }
+}
+
+/* Pour les écrans d'ordinateur */
+@media screen and (min-width: 1200px) {
+    #map {
+        width: 1200px;
+        height: 1200px;
+    }
 }
