@@ -41,7 +41,7 @@
 
 .card-image {
     width: 100%;
-    height: 200px;
+    height: 100px;
     object-fit: cover;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
@@ -64,6 +64,10 @@
         width: 600px;
         height: 600px;
     }
+
+    .card-image {
+        height: 100px;
+    }
 }
 
 /* Pour les écrans d'ordinateur */
@@ -71,5 +75,9 @@
     #map {
         width: 1200px;
         height: 1200px;
+    }
+
+    .card-image {
+        height: 300px;
     }
 }
