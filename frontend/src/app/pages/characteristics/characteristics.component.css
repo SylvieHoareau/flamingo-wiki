@@ -10,7 +10,8 @@ body {
 
 /* Pour les écrans de smartphone */
 
-.section, .conclusion {
+.section, 
+.conclusion {
     max-width: 1200px;
     margin: 4rem auto;
     padding: 0 1.5rem;
@@ -33,38 +34,7 @@ h1.intro-title {
     background-color: rgba(0, 0, 0, 0.50);
 }
 
-
-article {
-    padding-top: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-}
-
-article h2 {
-    color: white;
-    background: var(--flamingo-warn);
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    margin-top: 0;
-    margin-left: 0;
-    border-radius: 6px 6px 0 0;
-}
-
-.section-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-}
-
+/* Section Introduction */
 .intro {
     position: relative;
     height: 200px;
@@ -74,10 +44,43 @@ article h2 {
     overflow: hidden;
 }
 
+/* Blocs d'articles */
+
+article {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 10px;
+}
+
+article h2 {
+    color: white;
+    background: var(--flamingo-warn);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 6px 6px 0 0;
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+
+
 /* Mise en page en colonnes */
 
 .physiques,
-.section > div {
+.habitat,
+.social,
+.protection,
+.awareness {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -85,16 +88,21 @@ article h2 {
     justify-content: space-between;
 }
 
-.physiques-text {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    width: 100%;    
+.physiques-text,
+.habitat-text,
+.social-text,
+.protection-text,
+.awareness-text {
+   flex: 1 1 300px;   
 }
 
 .physiques-image,
-.section > div > div:first-child,
-.section > div > div:last-child {
-    flex:  1 1 45%; 
+.habitat-image,
+.social-image,
+.protection-image,
+.awareness-image {
+    flex:  1 1 300px;
+    max-width: 100%; 
 }
 
 /* Images */
@@ -146,6 +154,7 @@ article h2 {
     flex: 1 1 300px;
 }
 
+/* Section multi-images */
 .conservation-images {
     display: flex;
     flex-wrap: wrap;
@@ -185,67 +194,39 @@ ul li {
 
 /* Pour les écrans de tablettes */
 @media (max-width: 768px) {
-    .cards {
+    .physiques,
+    .habitat,
+    .social,
+    .protection,
+    .awareness,
+    .conservation-images {
         flex-direction: column;
+        align-items: center;
     }
 
-   .card {
-        width: 100%;
-   }
-
-   .section-image {
-      max-height: 250px;
-   }
-
-   .section > div img + img {
-        margin-left: 1rem;
-    }
-
-   .physiques,
-   .section > div {
-        flex-direction: column;
-    }
-
-   h1.intro-title {
+    h1.intro-title {
         font-size: 2rem;
-   }
-}
-
-/* Pour les écrans d'ordinateur */
-@media (min-width: 1200px) {
-    .intro-text {
-        font-size: 1rem;
-    }
-    .section-image {
-        max-width: 50%;
-        height: auto;
     }
 
     .section-image {
         max-height: 250px;
     }
 
-    .section > div img + img {
-        margin-left: 1rem;
-        
+    .conservation-images img {
+        width: 100%;
     }
-  
-    .physiques,
-    .section > div {
-          flex-direction: row;
-    }
+}
 
-    .conservation-images {
-        display: flex;
-        flex-direction: row;
+/* Pour les écrans d'ordinateur */
+@media (min-width: 1200px) {
+    
+    .section-image {
+        max-height: 250px;
     }
 
     .conservation-images img {
         width: 33%;
         height: auto;
     }
-  
-    h1.intro-title {
-          font-size: 2rem;
-    }
+
 }
