@@ -1,32 +1,68 @@
+/* Variables */
+:root {
+    --flamingo-primary: #3f51b5; /* Exemple: Couleur primaire Material par défaut */
+    --flamingo-warn: #e91e63;    /* Votre couleur rose distinctive */
+    --flamingo-text: #212121;    /* Texte principal foncé pour contraste */
+    --flamingo-text-light: #ffffff; /* Texte clair pour fond sombre/coloré */
+    --navbar-bg: #ffffff;        /* Fond blanc moderne (ou un gris très clair) */
+    --link-hover-bg: rgba(0, 0, 0, 0.04); /* Fond léger au survol */
+    --active-link-color: var(--flamingo-warn); /* Couleur pour le lien actif */
+}
+
 /* Pour les écrans de smartphone (mobile first) */
 
 .navbar {
-    background: linear-gradient(90deg, #fcf5c0, #fcd1d9);
-    color: var(--flamingo-primary);
+    background: linear-gradient(90deg, #f8f9fa, #e9ecef);
+    color: var(--flamingo-text);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 64px;
 }
 
-a, button { 
-    color: var(--flamingo-warn);
-    font-weight: bold;
-    text-transform: uppercase;
+/* Style des liens et boutons dans la barre */
+.navbar a, 
+.navbar button.mat-button,
+.navbar button.mat-icon-button { 
+    color: var(--flamingo-text);
+    font-weight: 500;
+    text-transform: none;
     text-decoration: none;
     background: none;
     border: none;
-}
-
-a:hover, button:hover {
-    color: var(--flamingo-text);
+    padding: 0.5re 0.8rem;
     border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3 ease;
+    font-family: 'Roboto', sans-serif;
 }
 
-.logo {
-    font-size: 1.5rem;
+/* Effet de survol pour les liens et boutons */
+.navbar a:hover, 
+.navbar button.mat-button:hover,
+.navbar button.mat-icon-button:hover {
+    color: var(--flamingo-warn);
+    background-color: var(--link-hover-bg);
+}
+
+/* Style du lien actif */
+.navbar a:active-link {
+    color: var(--active-link-color);
     font-weight: 600;
-    margin-right: 1rem;
+}
+
+/* Style du logo */
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-right: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
     color: #e91e63;
 }
 
@@ -34,12 +70,20 @@ a:hover, button:hover {
     flex: 1 1 auto;
 }
 
+/* Bouton Menu Mobile */
 .menu-button {
     display: inline-flex; /* Bouton visible sur mobile */
     align-items: center;
     justify-content: center;
+    color: var(--flamingo-warn);
 }
 
+.menu-button:hover {
+    color: var(--flamingo-text);
+    background-color: var(--link-hover-bg);
+}
+
+/* Menu desktop */
 .desktop-menu {
     display: none; /* Bouton caché par défait*/
 }
@@ -51,6 +95,7 @@ a:hover, button:hover {
 
     .desktop-menu {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         gap: 10px;
     }
@@ -62,4 +107,28 @@ a:hover, button:hover {
     .logo {
         font-size: 1.8rem;
     }
+
+    .navbar {
+        padding: 0.75rem 2rem;
+    }
+}
+
+/* Styles spécifiques pour les éléments du menu déroulant (mat-menu) */
+.mat-mdc-menu-item {
+    font-family: 'Roboto', sans-serif;
+    text-transform: none;
+    font-weight: 500;
+    color: var(--flamingo-text);
+}
+
+.mat-mdc-menu-item:hover {
+    background-color: var(--link-hover-bg);
+    color: var(--flamingo-warn);
+}
+
+/* Style pour l'élément actif du menu déroulant */
+.mat-mdc-menu-item.active-link {
+    color: var(--active-link-color);
+    font-weight: 600;
+    background-color: rgba(233, 30, 99, 0.08);
 }
