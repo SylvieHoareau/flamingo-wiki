@@ -12,16 +12,16 @@
     <span class="spacer"></span>
 
     <nav class="desktop-menu" aria-label="Navigation principale">
-        <a mat-button routerLink="/">Accueil</a>
-        <a mat-button routerLink="/caracteristiques">Caractéristiques</a>
-        <a mat-button routerLink="/carte">Carte</a>
-        <a mat-button routerLink="/galerie">Galerie</a>
+        <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+        <a mat-button routerLink="/caracteristiques" routerLinkActive="active-link">Caractéristiques</a>
+        <a mat-button routerLink="/carte" routerLinkActive="active-link">Carte</a>
+        <a mat-button routerLink="/galerie" routerLinkActive="active-link">Galerie</a>
     </nav> 
 
     <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/">Accueil</button>
-        <button mat-menu-item routerLink="/caracteristiques">Caractéristiques</button>
-        <button mat-menu-item routerLink="/carte">Carte</button>
-        <button mat-menu-item routerLink="/galerie">Galerie</button>
+        <button mat-menu-item routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Accueil</button>
+        <button mat-menu-item routerLink="/caracteristiques" routerLinkActive="active-link">Caractéristiques</button>
+        <button mat-menu-item routerLink="/carte" routerLinkActive="active-link">Carte</button>
+        <button mat-menu-item routerLink="/galerie" routerLinkActive="active-link">Galerie</button>
     </mat-menu>
 </mat-toolbar>
