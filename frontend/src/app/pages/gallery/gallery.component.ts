@@ -14,6 +14,8 @@ export class GalleryComponent {
       'https://images.unsplash.com/photo-1529654674248-a940ce22fe51?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZsYW1pbmdvfGVufDB8MXwwfHx8Mg%3D%3D',
       'https://images.unsplash.com/photo-1564499022942-5fac4f61b64f?q=80&w=963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       'https://images.unsplash.com/photo-1575824285366-059b454f222d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGZsYW1pbmdvfGVufDB8MXwwfHx8Mg%3D%3D',
+      'https://images.unsplash.com/photo-1740403328254-94305e9a9c26?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGZsYW1pbmdvJTIwY2FtYXJndWV8ZW58MHwxfDB8fHwy',
+      'https://images.unsplash.com/photo-1700663505427-a32cfff32691?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGZsYW1pbmdvJTIwY2FtYXJndWV8ZW58MHwxfDB8fHwy'
     ]
 
 }

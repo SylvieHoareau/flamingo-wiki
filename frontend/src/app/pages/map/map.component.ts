@@ -36,17 +36,20 @@ export class MapComponent implements AfterViewInit {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(this.map);
 
-      // Crée une icône personnalisée
-      // const flamingoIcon = L.icon({
-      //   iconUrl: 'assets/icons/flamingo.png', // ← chemin de l’image
-      //   iconSize: [32, 32],      // taille de l’icône en pixels
-      //   iconAnchor: [16, 32],    // point d’ancrage (bas centre)
-      //   popupAnchor: [0, -32]    // point d’ancrage du popup
-      // });
+       // Crée une icône SVG rose
+       const flamingoIcon = L.divIcon({
+        className: 'flamingo-icon',
+        html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
+                 <circle cx="12" cy="12" r="10" fill="pink" />
+               </svg>`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32]
+      });
 
       // Ajoute les marqueurs
       this.flamingoLocations.forEach(location => {
-        L.marker(location.coords)
+        L.marker(location.coords, {icon: flamingoIcon})
           .addTo(this.map)
           .bindPopup(`<strong>${location.name}</strong>`);
       })
