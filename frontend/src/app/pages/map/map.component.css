@@ -22,15 +22,12 @@
 }
 /* Cartes */
 .cards {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
 .card {
-    flex: 1 1 calc(50% - 1rem);
-    border: 1px solid #ddd;
     background: #fff;
     padding: 20px;
     border-radius: 0.5rem;
@@ -62,29 +59,34 @@
 }
 
 /* Pour les écrans de smartphone */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .card {
-        flex: 1 1 100%;
+        width: 100%;
         max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(255, 192, 203, 0.2);
     }
 }
 
 
 /* Pour les écrans de tablettes */
-@media screen and (min-width: 577px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     #map {
         width: 600px;
         height: 600px;
     }
 
     .cards {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les tablettes */
     }
 
     /* Mettre 2 cards par ligne */
     .card {
-        flex: 1 1 calc(50% - 1rem); /* Deux cartes par ligne */
-        max-width: calc(50% - 1rem);
+        width: 100%; /* Deux cartes par ligne */
+        max-width: 100%;
     }
 
 }
@@ -97,12 +99,12 @@
     }
 
     .cards {
-        flex-direction: row;
+        grid-template-columns: repeat(4, 1fr); /* Deux colonnes sur les tablettes */
     }
 
     .card {
-        flex: 1 1 calc(25% - 1rem); /* Quatre cards par ligne */
-        max-width: calc(25% - 1rem);
+        width: 100%; /* Quatre cartes par ligne */
+        max-width: 100%;
     }
 
 }
