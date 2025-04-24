@@ -1,7 +1,34 @@
 /* Pour les écrans de smartphones*/
-img {
+.gallery {
+    padding: 1rem;
+    text-align: center;
+}
+
+.photo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.photo-item {
+    border: 2px solid #ff6f91;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.photo {
     width: 100%;
     height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Navigation au clavier */
+.photo-item:focus-within {
+    outline: 3px solid #ff3d68;
 }
 
 /* Pour les écrans de tablettes */

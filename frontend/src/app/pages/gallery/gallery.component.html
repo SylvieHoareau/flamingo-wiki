@@ -1,10 +1,13 @@
-<div>
-    @for (photo of photos; track photo) {
+<section class="gallery" aria-labelledby="gallery-title">
+    <h1 id="gallery-title">Galerie de photos des flamants roses</h1>
+    <ul class="photo-list">
+      <li *ngFor="let photo of photos; let i = index" class="photo-item">
         <img 
-            [src]="photo" 
-            alt="Flamant rose"
-            loading="lazy"
-            width="300"
-        >
-    }
-</div>
+          [src]="photo" 
+          [alt]="'Photo de flamants roses ' + (i + 1)" 
+          class="photo"
+          loading="lazy" 
+        />
+      </li>
+    </ul>
+  </section>
