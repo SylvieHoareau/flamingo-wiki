@@ -31,18 +31,38 @@
     outline: 3px solid #ff3d68;
 }
 
+/* Pour les écrans de smartphone */
+@media (max-width: 767px) {
+    photo-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* Pour les écrans de tablettes */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .photo-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
     img {
         width: 50%;
-        height: 480px;
+        height: 400px;
     }
 }
 
 /* Pour les écrans d'ordinateur */
 
 @media (min-width: 1025px) {
+    .photo-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
     img {
         width: 25%;
         height: 748px;
