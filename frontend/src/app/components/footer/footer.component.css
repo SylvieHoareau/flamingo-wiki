@@ -1,0 +1,20 @@
+footer {
+    background-color: #FF69B4; /* Rose vif pour rappeler les flamants roses */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 5px solid #FF1493; /* Bordure rose plus foncé */
+}
+
+footer a {
+    color: #FFD700; /* Jaune doré pour un contraste élégant */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #FF4500; /* Orange vif pour l'effet hover */
+}

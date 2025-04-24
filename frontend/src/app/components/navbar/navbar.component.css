@@ -1,12 +1,13 @@
 /* Variables */
 :root {
-    --flamingo-primary: #3f51b5; /* Exemple: Couleur primaire Material par défaut */
-    --flamingo-warn: #e91e63;    /* Votre couleur rose distinctive */
-    --flamingo-text: #212121;    /* Texte principal foncé pour contraste */
+    --flamingo-primary: #ff6f91; /* Exemple: Couleur primaire Material par défaut */
+    --flamingo-secondary: #ff9a8b; /* Exemple: Couleur secondaire Material par défaut */
+    --flamingo-warn: #ff3d68;    /* Votre couleur rose distinctive */
+    --flamingo-text: #4a4a4a;    /* Texte principal foncé pour contraste */
     --flamingo-text-light: #ffffff; /* Texte clair pour fond sombre/coloré */
-    --navbar-bg: #ffffff;        /* Fond blanc moderne (ou un gris très clair) */
-    --link-hover-bg: rgba(0, 0, 0, 0.04); /* Fond léger au survol */
-    --active-link-color: var(--flamingo-warn); /* Couleur pour le lien actif */
+    --navbar-bg: linear-gradient(90deg, #ff9a8b, #ff6f91);        /* Fond blanc moderne (ou un gris très clair) */
+    --link-hover-bg: rgba(255, 111, 145, 0.04); /* Fond léger au survol */
+    --active-link-color: #ff3d68; /* Couleur pour le lien actif */
 }
 
 /* Pour les écrans de smartphone (mobile first) */
@@ -23,13 +24,14 @@
     top: 0;
     z-index: 1000;
     height: 64px;
+    border-bottom: 2px solid var(--flamingo-warn);
 }
 
 /* Style des liens et boutons dans la barre */
 .navbar a, 
 .navbar button.mat-button,
 .navbar button.mat-icon-button { 
-    color: var(--flamingo-text);
+    color: var(--flamingo-text-light);
     font-weight: 500;
     text-transform: none;
     text-decoration: none;
@@ -50,20 +52,22 @@
 }
 
 /* Style du lien actif */
-.navbar a:active-link {
+.navbar a.active-link {
     color: var(--active-link-color);
     font-weight: 600;
+    border-bottom: 2px solid var(--active-link-color);
 }
 
 /* Style du logo */
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-right: 1.5rem;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     cursor: pointer;
-    color: #e91e63;
+    color: var(--flamingo-text-light);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .spacer {
@@ -75,7 +79,13 @@
     display: inline-flex; /* Bouton visible sur mobile */
     align-items: center;
     justify-content: center;
-    color: var(--flamingo-warn);
+    color: var(--flamingo-text-light);
+    background-color: var(--flamingo-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .menu-button:hover {
@@ -123,7 +133,7 @@
 
 .mat-mdc-menu-item:hover {
     background-color: var(--link-hover-bg);
-    color: var(--flamingo-warn);
+    color: var(--flamingo-primary);
 }
 
 /* Style pour l'élément actif du menu déroulant */
