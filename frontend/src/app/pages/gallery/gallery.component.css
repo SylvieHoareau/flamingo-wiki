@@ -17,11 +17,16 @@
     border: 2px solid #ff6f91;
     border-radius: 8px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
 }
 
 .photo {
     width: 100%;
     height: auto;
+    object-fit: cover;
     display: block;
     border-radius: 8px;
 }
@@ -37,10 +42,6 @@
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    img {
-        width: 100%;
-        height: auto;
-    }
 }
 
 /* Pour les écrans de tablettes */
@@ -50,10 +51,6 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
-    img {
-        width: 50%;
-        height: 400px;
-    }
 }
 
 /* Pour les écrans d'ordinateur */
@@ -61,10 +58,5 @@
 @media (min-width: 1025px) {
     .photo-list {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    
-    img {
-        width: 25%;
-        height: 748px;
     }
 }

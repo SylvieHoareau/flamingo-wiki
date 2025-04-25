@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [CommonModule], // Uncomment if you need CommonModule for ngIf, ngFor, etc.
+  imports: [CommonModule],
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
