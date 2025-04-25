@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/flamingo-wiki": {},
+    "/flamingo-wiki/caracteristiques": {},
+    "/flamingo-wiki/carte": {},
+    "/flamingo-wiki/galerie": {}
+  }
+}
